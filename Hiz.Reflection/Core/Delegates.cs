@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Hiz.Reflection
 {
+    /* Delegate for an Action< ref T1, T2>
+     * https://stackoverflow.com/questions/2030303/delegate-for-an-action-ref-t1-t2
+     */
     public delegate void RefAction<TObject>(ref TObject instance);
     public delegate void RefAction<TObject, in T1>(ref TObject instance, T1 arg1);
     public delegate void RefAction<TObject, in T1, in T2>(ref TObject instance, T1 arg1, T2 arg2);
